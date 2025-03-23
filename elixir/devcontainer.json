@@ -1,0 +1,18 @@
+{
+  "name": "elixir-proj",
+  "image": "elixir-alpine:1.8.3",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash"
+			},
+			"extensions": [
+				"ms-elixir.elixir", // Estensione Elixir
+				"jakebecker.elixir-ls"
+			]
+		}
+	},
+  "forwardPorts": [3000],
+  "remoteUser": "vscode",
+	"runArgs": ["--name", "elixir-proj_devcontainer", "-p 20000:3000"]
+}
